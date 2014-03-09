@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @thumb.comment_id %>
+</p>
+
+<p>
+  <strong>Up or down:</strong>
+  <%= @thumb.up_or_down %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @thumb.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_thumb_path(@thumb) %> |
+<%= link_to 'Back', thumbs_path %>

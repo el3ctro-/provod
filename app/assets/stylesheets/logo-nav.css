@@ -1,0 +1,118 @@
+body {
+	margin-top: 125px; /* adjust this if the height of the menu bar changes */
+
+}
+#home-comments a {
+color:#000;
+
+}
+
+a:link    { color: #010 }  /* unvisited links */
+a:visited { color: #010 }  /* visited links   */
+a:hover   { color: #666 }  /* user hovers     */
+a:active  { color: #000 }  /* active links    */
+
+#home-comments a:hover {
+color:#eee !important;
+text-decoration: underline;
+}
+.nav {
+	margin-top: 25px; /* this is a faux center fix for the nav options - adjust this if you wish to change the logo height or the font of the menu items */
+}
+.navbar-inverse .navbar-nav>li>a {
+color: #fff;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+background: #327ccb; /* Old browsers */
+background: -moz-linear-gradient(top,  #327ccb 17%, #79c9ff 75%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(17%,#327ccb), color-stop(75%,#79c9ff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #327ccb 17%,#79c9ff 75%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #327ccb 17%,#79c9ff 75%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #327ccb 17%,#79c9ff 75%); /* IE10+ */
+background: linear-gradient(to bottom,  #327ccb 17%,#79c9ff 75%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#327ccb', endColorstr='#79c9ff',GradientType=0 ); /* IE6-9 */
+}
+.collapse { 
+background-color: #327CCB;
+}
+.navbar-header {
+background-color:#327CCB;
+}
+.navbar-inverse {
+background-color:#327CCB;
+/*border-color:#000;*/
+border: none;
+}
+.user {
+width:20%;
+float:right;
+}
+.scorediv {
+width: 10%;
+float:left;
+}
+.postdiv {
+width:70%;
+float:left;
+}
+.post {
+/*
+background-color: #eee;
+border-style: outset;
+border-width: 3px;
+border-color: #555;
+margin: 40px;
+*/
+
+}
+.comment {
+padding: 20px;
+}
+.commentinput { 
+background: rgba(226,226,226,1);
+background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,0.66) 50%, rgba(209,209,209,0.65) 51%, rgba(254,254,254,0.31) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(50%, rgba(219,219,219,0.66)), color-stop(51%, rgba(209,209,209,0.65)), color-stop(100%, rgba(254,254,254,0.31)));
+background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,0.66) 50%, rgba(209,209,209,0.65) 51%, rgba(254,254,254,0.31) 100%);
+background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,0.66) 50%, rgba(209,209,209,0.65) 51%, rgba(254,254,254,0.31) 100%);
+background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,0.66) 50%, rgba(209,209,209,0.65) 51%, rgba(254,254,254,0.31) 100%);
+background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(219,219,219,0.66) 50%, rgba(209,209,209,0.65) 51%, rgba(254,254,254,0.31) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 );}
+
+
+.input-block-level {
+
+width: 100%;
+}
+.badge {
+color:#eee !important;
+}
+.badge:hover {
+background-color:#666;
+}
+.logo-nav {
+font-family: 'Carrois Gothic SC', sans-serif;
+text-shadow: -1px 3px 1px rgba(0, 0, 0, 1);
+color:#fff !important;
+padding:25px;
+font-size: 2em;
+}
+
+	.input-group-addon
+{
+    background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+    color: rgb(255, 255, 255);
+}
+.form-control:focus
+{
+    background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+    color: rgb(255, 255, 255);
+}
+.form-signup input[type="text"],.form-signup input[type="password"] { border: 1px solid rgb(50, 118, 177); }
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('fonts/glyphicons-halflings-regular.eot');
+  src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded- opentype'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}

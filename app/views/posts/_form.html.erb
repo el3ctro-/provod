@@ -1,0 +1,49 @@
+<%= form_for @post, :html => {:multipart => true} do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="post">
+<div class="panel panel-primary">
+<div class="panel-heading"><h3 class="panel-title"> Create a new post</h3>
+
+</div>
+<div align="center"></div> 
+<div style="padding:5px;">
+      <%= f.label 'Title:' %><br>
+    <%= f.text_field :title %><br>
+      <%= f.label 'Link:' %><br>
+    <%= f.text_field :link %><Br>
+  
+  
+      <%= f.label 'Description:' %><br>
+    <%= f.text_area :words %>
+  
+  <Br>
+
+
+  <div class="field">
+    <%= f.label 'Post as:' %><br>
+	<%= f.select :user_id, [['Anonymous',2],['Josh',1]] %>
+  </div>
+  <div class="field">
+  <%= f.file_field :picture %>
+  </div>
+  <strong>By:</strong>
+  You
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+</div>
+<br>
+<%= link_to 'Back', '/' %>
+<% end %>
+</div>
+</div>

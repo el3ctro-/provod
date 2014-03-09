@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<div class="post">
+<div class="panel panel-primary">
+<div class="panel-heading"><h3 class="panel-title">  <%= @post.title %></h3>
+
+</div>
+<div class="post">
+<div align="center"><%= image_tag(@post.picture_url) if @post.picture.present? %></div>
+
+<p>
+
+  <br>
+  <strong><%= @post.words %></strong>
+  <Br>
+  <strong>Posted By:</strong>
+  <%= @users.find_by_id(@post.user_id).name %>
+</p>
+
+Comments:
+
+<div class="comment bg-success" style="padding:5px !important;">
+<% @comments.each do |comment| %>
+
+<span class="glyphicon glyphicon-pencil text-info">
+<%= comment[:words] %> &nbsp;</span><span class="label label-info"><%= @users.find_by_id(comment[:user_id]).name %></span>
+<br>
+
+<% end %>
+</div>
+
+	<div style="width:100%;padding:5px;">
+		<form>
+            <fieldset>
+                <textarea rows="3" id="description" name="description" class="input-block-level commentinput" placeholder="Enter Comment Here"></textarea>
+                <button type="submit" class="btn btn-success pull-right">Send Comment</button>
+            </fieldset>
+        </form>
+	</div>
+
+<%= link_to 'Back', '/' %>
+</div>
+</div>
+ 

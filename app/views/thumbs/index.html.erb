@@ -1,0 +1,31 @@
+<h1>Listing thumbs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Comment</th>
+      <th>Up or down</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @thumbs.each do |thumb| %>
+      <tr>
+        <td><%= thumb.comment_id %></td>
+        <td><%= thumb.up_or_down %></td>
+        <td><%= thumb.user_id %></td>
+        <td><%= link_to 'Show', thumb %></td>
+        <td><%= link_to 'Edit', edit_thumb_path(thumb) %></td>
+        <td><%= link_to 'Destroy', thumb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Thumb', new_thumb_path %>
