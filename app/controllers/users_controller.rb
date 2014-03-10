@@ -35,14 +35,7 @@ class UsersController < ApplicationController
       render 'new'
 
     end
-	
-	
-    respond_to do |format|
-      if @user.save
-
-      else
-      end
-    end
+    
   end
 
   # PATCH/PUT /users/1
