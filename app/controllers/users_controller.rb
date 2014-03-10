@@ -29,7 +29,7 @@ class UsersController < ApplicationController
       sign_in @user
       flash[:success] = "You signed in as #{@user.name}"
 
-		redirect_to :root # was going to @user
+		redirect_to '/' # was going to @user
 
     else
       render 'new'
