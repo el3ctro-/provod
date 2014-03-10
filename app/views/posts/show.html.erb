@@ -1,16 +1,13 @@
 <p id="notice"><%= notice %></p>
-
-<div class="post">
+<div align="center"><%= image_tag(@post.picture_url) if @post.picture.present? %></div>
+<div class="viewpost">
 <div class="panel panel-primary">
 <div class="panel-heading"><h3 class="panel-title">  <%= @post.title %></h3>
 
 </div>
-<div class="post">
-<div align="center"><%= image_tag(@post.picture_url) if @post.picture.present? %></div>
+<div class="viewpost">
 
-<p>
 
-  <br>
   <strong><%= @post.words %></strong>
   <Br>
   <strong>Posted By:</strong>
@@ -33,7 +30,9 @@ Comments:
 		 <%= form_for(:comment, url: comments_path) do |f| %>
             <fieldset>
 			<%= f.text_area :words, placeholder: "Enter Comment Here", class: "input-block-level" %>
-                <button type="submit" class="btn btn-success pull-right">Send Comment</button>
+                <%= f.submit "Submit Comment", class: "btn btn-success pull-right" %>
+				<%= f.hidden_field :post_id, :value => @post.id %>
+				<%= f.hidden_field :user_id, :value => session[:user_id] %>
             </fieldset>
         <% end %>
 	</div>
