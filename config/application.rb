@@ -22,10 +22,10 @@ module Whiteboard
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+#    config.assets.version = '1.0'
 
     # get precompilation working on heroku:
-    config.assets.initialize_on_precompile = true
+#    config.assets.initialize_on_precompile = true
 
     config.serve_static_assets = false
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
