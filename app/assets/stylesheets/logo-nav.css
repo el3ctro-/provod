@@ -81,6 +81,11 @@ background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,0.
 background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(219,219,219,0.66) 50%, rgba(209,209,209,0.65) 51%, rgba(254,254,254,0.31) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 );}
 
+.postimg {
+padding: 5px;
+margin-bottom: 5px;
+margin-top: -20px;
+}
 
 .input-block-level {
 
