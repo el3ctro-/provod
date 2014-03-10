@@ -6,11 +6,15 @@ gem 'rails', '4.0.2'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 gem 'carrierwave'
-group :production do
+
+group :development, :production do
   gem 'pg'
   gem 'rails_12factor', '0.0.2'
 end
 
+group :test do
+  gem 'sqlite3'
+end
 
 
 # Use SCSS for stylesheets

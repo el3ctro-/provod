@@ -8,6 +8,7 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -36,10 +37,15 @@
 					</li>
                     <li><a href="/about">About</a>
                     </li>
+					<% if signed_in? %>
+					<li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+					<% else %>
+
                     <li><a href="#" data-toggle="modal" data-target="#signUp">Register</a>
                     </li>
                     <li><a href="#" data-toggle="modal" data-target="#logIn">Log In</a>
                     </li>
+					<% end %>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

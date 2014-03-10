@@ -30,12 +30,12 @@ Comments:
 </div>
 
 	<div style="width:100%;padding:5px;">
-		<form>
+		 <%= form_for(:comment, url: comments_path) do |f| %>
             <fieldset>
-                <textarea rows="3" id="description" name="description" class="input-block-level commentinput" placeholder="Enter Comment Here"></textarea>
+			<%= f.text_area :words, placeholder: "Enter Comment Here", class: "input-block-level" %>
                 <button type="submit" class="btn btn-success pull-right">Send Comment</button>
             </fieldset>
-        </form>
+        <% end %>
 	</div>
 
 <%= link_to 'Back', '/' %>

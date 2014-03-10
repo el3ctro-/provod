@@ -3,12 +3,19 @@
 <div class="panel panel-primary">
 <div class="panel-heading"><h3 style="margin-top:10px !important;">Showing Popular Posts</h3>
 </div>
+
 		<% @posts.each do |post| %>
 <div class="row active" style="padding:5px;border-bottom:5px;border-color:#000;">
   <div class="col-md-2">
   <img src="/assets/up-arrow-icon.png" style="width:20px;"><img src="/assets/down-arrow-icon.png" style="width:20px;"><%= post.score %></div>
   <div class="col-md-8">
-  <%= link_to post.words, post_path(post) %><%= link_to "#{@comments.find_all_by_post_id(post.id).count} Comments", post_path(post), class: "badge pull-right" %>
+  <% if post.link %>
+  <%= link_to post.title, post.link %>
+  <% elsif post.title == nil %>
+  <%= link_to "(No Title)", post_path(post) %>
+  <% else %>
+  <%= link_to post.title, post_path(post) %>
+  <% end %> <%= link_to "#{@comments.find_all_by_post_id(post.id).count} Comments", post_path(post), class: "badge pull-right" %>
   <div class="well" style="padding:5px;margin:5px;">
 
   <% if @comments.find_last_by_post_id(post.id) != nil 

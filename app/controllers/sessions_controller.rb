@@ -3,18 +3,24 @@ class SessionsController < ApplicationController
  # user = User.find_by(name: params[:name])
  # if user and user.authenticate(params[:password])
  #   session[:user_id] = user_id
-   user = User.find_by(email: params[:session][:email].downcase)
+
+  end
+
+  def create
+   user = User.find_by(name: params[:session][:name].downcase)
     if user && user.authenticate(params[:session][:password])
-  
+      sign_in user
+	  session[:user_id] = user.id
+	  session[:user_name] = user.name
+	  redirect_to :root #this was redirecting to user
     else
-	flash[:error] = 'Invalid email/password combination' # Not quite right!
+	flash.now[:error] = 'Invalid username or password.  Try again.' # Not quite right!
     render 'new'
     end
   end
 
-  def create
-  end
-
   def destroy
-  end
+    sign_out
+    redirect_to root_url
+	end
 end

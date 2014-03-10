@@ -3,10 +3,12 @@ Whiteboard::Application.routes.draw do
 #  get "sessions/create"
 #  get "sessions/destroy"
   get 'register' => 'users#new'
-  match '/signup',  to: 'users#new',            via: 'get'
-  match '/signin',  to: 'sessions#new',         via: 'get'
-  match '/signout', to: 'sessions#destroy',     via: 'delete'
   resources :sessions, only: [:new, :create, :destroy]
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
+#  match '/signup',  to: 'users#new',            via: 'get'
+#  match '/signin',  to: 'sessions#new',         via: 'get'
+#  match '/signout', to: 'sessions#destroy',     via: 'delete'
+
 #  map.connect 'article/:permalink', :controller => 'article', :action => 'view'
 
   resources :posts
