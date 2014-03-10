@@ -32,7 +32,10 @@ Comments:
 			<%= f.text_area :words, placeholder: "Enter Comment Here", class: "input-block-level" %>
                 <%= f.submit "Submit Comment", class: "btn btn-success pull-right" %>
 				<%= f.hidden_field :post_id, :value => @post.id %>
+				<% if signed_in? %>
 				<%= f.hidden_field :user_id, :value => session[:user_id] %>
+				<% else %>
+				<%= f.hidden_field :user_id, :value => 2 %>
             </fieldset>
         <% end %>
 	</div>
