@@ -11,6 +11,13 @@
   <img src="/assets/up-arrow-icon.png" style="width:20px;"><img src="/assets/down-arrow-icon.png" style="width:20px;"><%= post.score %></div>
 -->
   <div class="col-md-10">
+	<% if post.picture.present? %>
+	<span class="glyphicon glyphicon-picture"></span>
+	<% elsif post.link.length > 2 %>
+	<span class="glyphicon glyphicon-globe"></span>
+	<% else %>
+  <span class="glyphicon glyphicon-book"></span>
+	<% end %>
   <% if post.link.length > 2 %>
   <%= link_to post.title, post.link %>
   <% elsif post.link.length <= 2 %>
