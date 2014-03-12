@@ -1,9 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Gafata);
+
 body {
 	margin-top: 125px; /* adjust this if the height of the menu bar changes */
-font-family: 'Gafata', sans-serif;
-}
 
+}
+.panel {
+	font-family: 'Gafata', sans-serif !important; 
+}
 #home-comments a {
 color:#000;
 
