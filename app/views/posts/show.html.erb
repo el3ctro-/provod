@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div align="center"><%= image_tag(@post.picture.url, class: "postimg") if @post.picture.present? %>
+	<img src="<%= @post.picture.url.to_s %>">
 
 <div class="viewpost">
 <div class="panel panel-primary">
