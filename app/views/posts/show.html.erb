@@ -3,10 +3,10 @@
 	<% if @post.picture.present? %>
 	<img src="http://<%= @post.picture.url.to_s %>">
 	<br>
-	<br>
+	
 	<% end %>
 	</div>
-
+<br>
 <div class="viewpost">
 <div class="panel panel-primary">
 <div class="panel-heading"><h3 class="panel-title">  <%= @post.title %></h3>
