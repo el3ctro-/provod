@@ -1,7 +1,9 @@
+@import url(http://fonts.googleapis.com/css?family=Gafata);
 body {
 	margin-top: 125px; /* adjust this if the height of the menu bar changes */
-
+font-family: 'Gafata', sans-serif;
 }
+
 #home-comments a {
 color:#000;
 
@@ -67,6 +69,7 @@ margin: 40px;
 
 }
 .viewpost {
+	padding: 5px;
 }
 .comment {
 padding: 20px;
@@ -98,7 +101,7 @@ color:#eee !important;
 background-color:#666;
 }
 .logo-nav {
-font-family: 'Carrois Gothic SC', sans-serif;
+font-family: 'Carrois Gothic SC', sans-serif !important;
 text-shadow: -1px 3px 1px rgba(0, 0, 0, .4);
 /*	text-shadow: 0px 2px 5px rgba(150, 150, 150, 0.68); */
 color:#fff !important;
