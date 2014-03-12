@@ -7,5 +7,6 @@ class WelcomeController < ApplicationController
 	
 	def gallery
 		@posts = Post.all
+		@comments = Comment.all
 		end
 end
