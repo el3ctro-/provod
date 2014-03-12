@@ -1,12 +1,7 @@
 <p id="notice"><%= notice %></p>
 <div align="center"><%= image_tag("#{@post.picture_url}", class: "postimg") if @post.picture.present? %>
 <%= debug(@post) %></div>
-
-<% for photo in @post.picture %>
-
-<%=link_to(image_tag(photo.image_url.to_s), photo.image_url.to_s,   
-                                                       :class=>"lb_test") %>
-<% end %>
+<%= debug(@post.picture) %>
 	<%= debug(@post.picture.url) %>
 <div class="viewpost">
 <div class="panel panel-primary">
