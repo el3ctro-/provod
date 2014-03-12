@@ -16,7 +16,7 @@
   <% else post.title == nil %>
   <%= link_to "(No Title)", post_path(post) %>
   <% end %> 
-		<em><%= time_ago_in_words(post.updated_at) %></em> <%= link_to "#{@comments.find_all_by_post_id(post.id).count} Comments", post_path(post), class: "badge pull-right" %>
+		 <%= link_to "#{@comments.find_all_by_post_id(post.id).count} Comments", post_path(post), class: "badge pull-right" %>
   <div class="well" style="padding:5px;margin:5px;">
 
   <% if @comments.find_last_by_post_id(post.id) != nil 
@@ -31,7 +31,8 @@
 
 </div></div>
     <div class="col-md-2">
-	<%= @users.find_by_id(post.user_id).name  %>
+	<%= @users.find_by_id(post.user_id).name  %><br>
+			<em>Posted <%= time_ago_in_words(post.updated_at) %> ago</em>
 	</div>
 	</div>
 		<% end %>
