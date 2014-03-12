@@ -22,6 +22,7 @@ text-decoration: underline;
 }
 .nav {
 	margin-top: 25px; /* this is a faux center fix for the nav options - adjust this if you wish to change the logo height or the font of the menu items */
+	font-family: 'Source Sans Pro', sans-serif;S
 }
 .navbar-inverse .navbar-nav>li>a {
 color: #fff;
