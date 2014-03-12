@@ -3,6 +3,7 @@
 	<% if @post.picture.present? %>
 	<img src="http://<%= @post.picture.url.to_s %>">
 	<br>
+	<br>
 	<% end %>
 	</div>
 
@@ -16,6 +17,8 @@
 
   <strong><%= @post.words %></strong>
   <Br>
+	<a href="<%= @post.link %>"><%= @post.link %></a>
+	<br>
   <strong>Posted By:</strong>
   <%= @users.find_by_id(@post.user_id).name %>
 </p>
