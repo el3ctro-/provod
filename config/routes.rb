@@ -3,7 +3,7 @@ Whiteboard::Application.routes.draw do
 #  get "sessions/create"
 #  get "sessions/destroy"
   get 'register' => 'users#new'
-	get 'gallery', to: 'welcome#gallery',
+	get 'gallery' => 'welcome#gallery'
   resources :sessions, only: [:new, :create, :destroy]
   match '/signout', to: 'sessions#destroy',     via: 'delete'
 #  match '/signup',  to: 'users#new',            via: 'get'
