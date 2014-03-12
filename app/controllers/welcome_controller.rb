@@ -4,4 +4,8 @@ class WelcomeController < ApplicationController
 	  @users = User.all
 	  @comments = Comment.all
   end
+	
+	def gallery
+		@posts = Post.all
+		end
 end

@@ -29,7 +29,7 @@ Comments:
 <% @comments.each do |comment| %>
 
 <span class="glyphicon glyphicon-pencil text-info"></span>
-<%= comment[:words] %><span class="label label-info pull-right"><%= @users.find_by_id(comment[:user_id]).name %></span>
+<em><%= comment[:words] %> </em> - Posted <%= time_ago_in_words(post.updated_at) %> ago<span class="label label-info"><%= @users.find_by_id(comment[:user_id]).name %></span>
 <br>
 
 <% end %>
