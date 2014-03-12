@@ -3,10 +3,10 @@
 <table>
   <thead>
     <tr>
-      <th>Post</th>
-      <th>Score</th>
-      <th>Words</th>
-      <th>User</th>
+			<th>Title&nbsp;&nbsp;</th>
+      <th>Score&nbsp;&nbsp;</th>
+      <th>Words&nbsp;&nbsp;</th>
+      <th>User&nbsp;&nbsp;</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,7 +16,7 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.post %></td>
+        <td><%= post.title %></td>
         <td><%= post.score %></td>
         <td><%= post.words %></td>
         <td><%= post.user_id %></td>
