@@ -1,8 +1,6 @@
 <p id="notice"><%= notice %></p>
-<div align="center"><%= image_tag("#{@post.picture_url}", class: "postimg") if @post.picture.present? %>
-<%= debug(@post) %></div>
-<%= debug(@post.picture) %>
-	<%= debug(@post.picture.url) %>
+<div align="center"><%= image_tag(@post.picture.url, class: "postimg") if @post.picture.present? %>
+
 <div class="viewpost">
 <div class="panel panel-primary">
 <div class="panel-heading"><h3 class="panel-title">  <%= @post.title %></h3>
