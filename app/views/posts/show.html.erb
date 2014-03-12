@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 <div align="center"><%= image_tag(@post.picture.url, class: "postimg") if @post.picture.present? %>
+	<% if @post.picture.present? %>
 	<img src="http://<%= @post.picture.url.to_s %>">
+	<br>
+	<% end %>
+	</div>
 
 <div class="viewpost">
 <div class="panel panel-primary">
@@ -21,8 +25,8 @@ Comments:
 <div class="comment bg-success" style="padding:5px !important;">
 <% @comments.each do |comment| %>
 
-<span class="glyphicon glyphicon-pencil text-info">
-<%= comment[:words] %> &nbsp;</span><span class="label label-info"><%= @users.find_by_id(comment[:user_id]).name %></span>
+<span class="glyphicon glyphicon-pencil text-info"></span>
+<%= comment[:words] %><span class="label label-info pull-right"><%= @users.find_by_id(comment[:user_id]).name %></span>
 <br>
 
 <% end %>
