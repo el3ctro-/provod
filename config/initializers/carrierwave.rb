@@ -14,7 +14,7 @@ CarrierWave.configure do |config|
     :provider              => 'AWS',
     :aws_access_key_id     => 'AKIAIWYBWFQZO4SLBJRQ',
     :aws_secret_access_key => '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',
-    :region                => ENV['S3_REGION']
+    :region                => 'us-west-2'
   }
  
   # For testing, upload files to local `tmp` folder.
