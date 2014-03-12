@@ -2,9 +2,9 @@
 
 
 		<% @posts.reverse.each do |post| %>
-     <% if post.image.present? %>
+     <% if post.picture.present? %>
   <div class="col-md-4">
-  <img src="<%= post.image.url %>">
+  <img src="<%= post.picture.url %>">
 	</div>
       <% end %>
 		<% end %>
