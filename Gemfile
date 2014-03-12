@@ -8,6 +8,7 @@ gem 'rails', '4.0.2'
 gem 'carrierwave'
 gem "fog", "~> 1.20.0"
 gem 'mini_magick'
+gem 'will_paginate', '~> 3.0'
 group :development, :production do
   gem 'pg'
   gem 'rails_12factor', '0.0.2'
