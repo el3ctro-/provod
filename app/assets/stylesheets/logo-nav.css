@@ -104,8 +104,8 @@ color:#eee !important;
 background-color:#666;
 }
 .logo-nav {
-font-family: 'Carrois Gothic SC', sans-serif !important;
-text-shadow: -1px 3px 1px rgba(0, 0, 0, .4);
+/*font-family: 'Carrois Gothic SC', sans-serif !important;
+text-shadow: -1px 3px 1px rgba(0, 0, 0, .4); */
 /*	text-shadow: 0px 2px 5px rgba(150, 150, 150, 0.68); */
 color:#fff !important;
 padding:25px;
