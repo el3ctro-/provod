@@ -3,8 +3,8 @@
 	<% if @post.picture.present? %>
 	<img src="http://<%= @post.picture.url.to_s %>">
 	<br>
-	
-	<% if @post.link =~ /\.(gif|jpe?g|png)$/ %>
+	<% end %>
+	<% if (@post.link =~ /\.(gif|jpe?g|png)$/) %>
 	<img src="<%= @post.link %>">
 	<br>
 	<% end %>
