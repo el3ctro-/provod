@@ -4,7 +4,11 @@
 	<img src="http://<%= @post.picture.url.to_s %>">
 	<br>
 	
+	<% if @post.link =~ /\.(gif|jpe?g|png)$/ %>
+	<img src="<%= @post.link %>">
+	<br>
 	<% end %>
+	
 	</div>
 <br>
 <div class="viewpost">
@@ -13,8 +17,9 @@
 
 </div>
 <div class="viewpost">
-
-
+	
+<br>
+	<br>
   <strong><%= @post.words %></strong>
   <Br><br>
 	<a href="<%= @post.link %>"><%= @post.link %></a>
@@ -22,7 +27,8 @@
   <strong>Posted By:</strong>
   <%= @users.find_by_id(@post.user_id).name %>
 </p>
-
+<% # params.inspect 
+%>
 Comments:
 
 <div class="comment bg-success" style="padding:5px !important;">

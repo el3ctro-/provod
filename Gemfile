@@ -6,17 +6,23 @@ gem 'rails', '4.0.2'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3'
 gem 'carrierwave'
-gem "fog", "~> 1.20.0"
+
 gem 'mini_magick'
 gem 'will_paginate', '~> 3.0'
 group :development, :production do
   gem 'pg'
   gem 'rails_12factor', '0.0.2'
+	gem "fog", "~> 1.20.0"
 end
 
-group :test do
-  gem 'sqlite3'
+group :development, :test do
+ gem 'figaro'
+ gem 'sqlite3'
 end
+
+#group :test do
+
+#end
 #gem 'validate_url'
 
 # Use SCSS for stylesheets

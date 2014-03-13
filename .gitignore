@@ -24,3 +24,8 @@ doc/
 .DS_Store
 .idea
 .secret
+.env
+Procfile
+# Ignore application configuration
+/config/application.yml
+/config/initializers/carrierwavesecret.rb

@@ -29,10 +29,17 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+		#  /\.(gif|jpe?g|png)$/ =~ "testing"
+		#if (params[:post][:link] =~ /\.(gif|jpe?g|png)$/)
+	#		params[:post][:picture] = "Is an image"
+#			end
+#		@mylink = params[:post][:picture]
+		
     @post = Post.new(post_params)
-
+		
     respond_to do |format|
       if @post.save
+				@link = post_params[:link]
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render action: 'show', status: :created, location: @post }
       else
