@@ -8,12 +8,26 @@ class PostsController < ApplicationController
 
   end
 
+  def protected
+    session[:permission] = 0
+    if !params.nil? && params[:password] == 'testing'
+    session[:permission] = 1
+    redirect_to :action => 'show', :id => params[:id]
+  end
+  end
+
   # GET /posts/1
   # GET /posts/1.json
   def show
   
   @comments = Comment.find_all_by_post_id(params[:id])
   @users = User.all
+  if session[:permission] == 1 || (signed_in? && current_user.permission.to_i > 1 && @post.protected.to_i == 1)
+    render action: 'show'
+  elsif @post.protected.to_i == 1 || !current_user.nil? && current_user.permission.to_i < 2
+    redirect_to :action => 'protected', :id => @post.id
+  else render action: 'show'
+  end
 #  @commentlist = @comments.collect { |e| e.words }
   end
 
@@ -81,6 +95,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:post, :score, :words, :user_id, :picture, :title, :link)
+      params.require(:post).permit(:post, :score, :words, :user_id, :picture, :title, :link, :protected)
     end
 end

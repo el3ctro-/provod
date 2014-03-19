@@ -39,7 +39,13 @@
 					<div class="field">
 					<%= f.label 'Post as:' %><br>
 					<% if signed_in?  %>
-					<%= f.select :user_id, [[session[:user_name],session[:user_id]], ['Anonymous',2]] %>
+					<%= f.select :user_id, [[current_user.name,current_user.id], ['Anonymous',2]] %>
+						<% if current_user.permission.to_i > 1 %>
+						<br>
+						<%= f.check_box(:protected) %>
+						<%= f.label 'Protected?' %>
+						<% end %>
+
 					<% else %>
 					<%= f.select :user_id, [['Anonymous',2]] %>
 					<% end %>

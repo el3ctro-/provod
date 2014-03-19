@@ -18,6 +18,7 @@ module SessionsHelper
   
   def signed_in?
     !current_user.nil?
+    # && current_user.to_s.length > 1
   end
 
   def sign_out

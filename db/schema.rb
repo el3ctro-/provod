@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140310010444) do
+ActiveRecord::Schema.define(version: 20140319015246) do
 
   create_table "comments", force: true do |t|
     t.integer  "post_id"
@@ -37,6 +37,9 @@ ActiveRecord::Schema.define(version: 20140310010444) do
     t.string   "link"
     t.string   "type"
     t.string   "picture"
+    t.integer  "board_id"
+    t.string   "board_name"
+    t.integer  "protected"
   end
 
   create_table "thumbs", force: true do |t|

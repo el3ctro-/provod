@@ -6,12 +6,11 @@ class SessionsController < ApplicationController
 
   end
 
+	# POST TO create
   def create
    user = User.find_by(name: params[:session][:name])
     if user && user.authenticate(params[:session][:password])
       sign_in user
-	  session[:user_id] = user.id
-	  session[:user_name] = user.name
 	  redirect_to :root #this was redirecting to user
     else
 	flash.now[:error] = 'Invalid username or password.  Try again.' # Not quite right!
