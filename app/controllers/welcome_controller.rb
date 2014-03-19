@@ -16,7 +16,7 @@ class WelcomeController < ApplicationController
 		@posts = Post.order("created_at DESC").where("protected > 0")
 		@comments = Comment.all
 		else
-		redirect_to :root
+		redirect_to '/protected/gallery'
 		end
 	end
 
