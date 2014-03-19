@@ -15,7 +15,6 @@ class WelcomeController < ApplicationController
 		if session[:permission] == 1
 		@posts = Post.order("created_at DESC").where("protected > 0")
 		@comments = Comment.all
-
 		end
 	end
 
