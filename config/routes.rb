@@ -4,6 +4,7 @@ Whiteboard::Application.routes.draw do
 #  get "sessions/destroy"
   get 'register' => 'users#new'
 	get 'gallery' => 'welcome#gallery'
+  get 'protected_gallery' => 'welcome#protected_gallery'
   get 'protected/:id' => 'posts#protected'
   match "protected/:id" => "posts#protected", via: [:post]
   resources :sessions, only: [:new, :create, :destroy]
