@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Protected Gallery By Most Recent</h1>
-		<% @posts.reverse.each do |post| %>
+		<% @posts.each do |post| %>
      <% if post.picture.present? %>
   <div class="col-md-12" style="margin-bottom: 30px;" align="center">
   <a href="<%= post_path(post) %>"><img src="http://<%= post.picture.url %>" style="margin-bottom: 10px;"><br><%= @comments.find_all_by_post_id(post.id).count %> Comments</a>
