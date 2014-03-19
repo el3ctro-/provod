@@ -13,7 +13,7 @@ class WelcomeController < ApplicationController
 
 	def protected_gallery
 		if session[:permission] == 1
-		@posts = Post.order("created_at DESC").where("protected < ''")
+		@posts = Post.order("created_at DESC").where("protected > 0")
 		else
 		redirect_to :root
 		end
