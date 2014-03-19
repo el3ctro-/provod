@@ -1,0 +1,15 @@
+<div class="panel panel-primary">
+	<div class="panel-heading"><h3 style="margin-top:10px !important;">Please enter a password</h3>
+	</div>
+
+	<div style="padding:20px;" align="center">
+
+	<%= form_tag({:controller => "posts", :action => "protected"}, :method => "post", :id => "#{params[:id]}") do %>
+	Please enter passphrase:
+	<%= text_field_tag(:password) %>
+
+	<%= submit_tag("Submit") %>
+	<% end %>
+
+	</div>
+</div>
