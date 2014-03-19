@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     session[:permission] = 0
     if !params.nil? && params[:password] == 'testing'
     session[:permission] = 1
-    if params[:id].to_i > 0
+    elsif params[:id].to_i > 0
     redirect_to :action => 'show', :id => params[:id]
   elsif params[:id] == 'gallery'
     redirect_to '/protected_gallery'
