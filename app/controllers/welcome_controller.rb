@@ -15,8 +15,7 @@ class WelcomeController < ApplicationController
 		if session[:permission] == 1
 		@posts = Post.order("created_at DESC").where("protected > 0")
 		@comments = Comment.all
-		else
-		redirect_to '/protected/gallery'
+
 		end
 	end
 
