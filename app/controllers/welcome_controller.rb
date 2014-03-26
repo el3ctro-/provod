@@ -17,6 +17,12 @@ class WelcomeController < ApplicationController
 		@comments = Comment.all
 		end
 	end
-
-
+	def feed
+    @posts = Post.order("created_at DESC").where("protected is NULL", :limit => 10)
+    @users = User.all
+	    respond_to do |format|
+	      format.html
+	      format.rss { render :layout => false } #index.rss.builder
+	    end
+	end
 end

@@ -6,6 +6,8 @@ Whiteboard::Application.routes.draw do
 	get 'gallery' => 'welcome#gallery'
   get 'protected_gallery' => 'welcome#protected_gallery'
   get 'protected/:id' => 'posts#protected'
+  get '/feed' => 'welcome#feed',
+      :as => :feed, :defaults => { :format => 'rss' }
   match "protected/:id" => "posts#protected", via: [:post]
   resources :sessions, only: [:new, :create, :destroy]
   match '/signout', to: 'sessions#destroy',     via: 'delete'
