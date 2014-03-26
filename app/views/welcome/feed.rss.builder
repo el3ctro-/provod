@@ -12,7 +12,7 @@ xml.rss :version => "2.0" do
         xml.author @users.find_by_id(post.user_id).name 
         xml.description post.words
         xml.pubDate post.updated_at.to_s(:rfc822)
-        xml.enclosure url: "http://provot.s3-us-west-1.amazonaws.com#{post.picture}", type:"image/jpeg"
+        xml.enclosure url: "#{post.picture}", type:"image/jpeg"
         xml.link post_url(post)
       end
     end
